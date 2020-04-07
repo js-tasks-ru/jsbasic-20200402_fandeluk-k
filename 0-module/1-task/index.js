@@ -4,6 +4,11 @@
  * @param {number} n index
  * @returns {number}
  */
+
 function sum(m, n) {
-  // ваш код...
+  let res = +m + +n;
+  return res;
 }
+
+sum(1, 1);
+sum(2, 5);
