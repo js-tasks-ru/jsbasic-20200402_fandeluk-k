@@ -12,3 +12,4 @@ function sum(m, n) {
 
 sum(1, 1);
 sum(2, 5);
+sum(2, 2);
