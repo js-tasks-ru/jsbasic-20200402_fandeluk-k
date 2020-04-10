@@ -3,5 +3,9 @@
  * @returns {string[]}  объект
  */
 function namify(users) {
-  // ваш код...
+  let arr = [];
+  users.forEach((value, i) => {
+    arr.push(value.name);
+  });
+  return arr;
 }
