@@ -5,5 +5,11 @@
  * @returns {string}
  */
 function showSalary(data, age) {
-  // ваш код...
+  let str = "";
+  data.forEach((item, index) => {
+    if (+age >= +item.age) {
+      str += `${item.name}, ${item.balance}\n`;
+    }
+  });
+  return str.slice(0, -1);
 }
