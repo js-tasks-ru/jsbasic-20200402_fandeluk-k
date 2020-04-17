@@ -6,7 +6,6 @@ function highlight(table) {
   let tBody = table.querySelector("tbody");
   let tBodyRows = Array.from(tBody.rows);
   tBodyRows.forEach((tr) => {
-    console.log(tr);
     let dataAvailble = tr.cells[3].getAttribute("data-available");
     let userAge = tr.cells[1].textContent;
     let genderSwitch = tr.cells[2].textContent;
