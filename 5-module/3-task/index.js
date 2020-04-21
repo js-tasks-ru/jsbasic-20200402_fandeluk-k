@@ -12,7 +12,6 @@ function initCarousel() {
     }
     if (btnRight && counter < 3) {
       counter++;
-      console.log(counter);
       carouselInner.style.transform = `translateX(${
         -carouselInner.offsetWidth * counter
       }px`;
