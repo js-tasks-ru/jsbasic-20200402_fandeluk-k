@@ -4,8 +4,7 @@
  */
 function makeDiagonalRed(table) {
   let rows = Array.from(table.rows);
-
-  rows.forEach((tr, i) => {
-    tr.cells[i].style.backgroundColor = "red";
+  rows.forEach((value, i) => {
+    value.cells[i].style.backgroundColor = "red";
   });
 }
