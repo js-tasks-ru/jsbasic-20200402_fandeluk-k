@@ -7,11 +7,9 @@ function initCarousel() {
   document.addEventListener("click", function (event) {
     let btnRight = event.target.closest(".carousel__arrow_right");
     let btnLeft = event.target.closest(".carousel__arrow_left");
-    counter >= 2
-      ? (document.querySelector(".carousel__arrow_right").style.display =
-          "none")
-      : false;
-
+    if (btnRight && counter >= 2) {
+      btnRight.style.display = "none";
+    }
     if (btnRight && counter < 3) {
       counter++;
       console.log(counter);
