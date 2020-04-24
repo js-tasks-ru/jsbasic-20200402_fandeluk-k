@@ -16,7 +16,9 @@ function initCarousel() {
       let clickRight = event.target.closest(".carousel__arrow_right");
       let clickLeft = event.target.closest(".carousel__arrow_left");
       //
-
+      counter >= 3
+        ? (arrowRight.style.display = "none")
+        : (arrowRight.style.display = "");
       if (clickRight) {
         switchRight();
       } else if (clickLeft) {
@@ -25,7 +27,8 @@ function initCarousel() {
       //
       function switchRight() {
         if (counter < slideElement - 1) {
-          counter++;
+          ++counter;
+          console.log(counter);
           carouselInner.style.transform = `translateX(${
             -carouselInner.offsetWidth * counter
           }px`;
