@@ -37,16 +37,12 @@ export default class UserTable {
   }
   searchItem(rows) {
     for (let item of rows) {
-      this.name = item.name;
-      this.age = item.age;
-      this.salary = item.salary;
-      this.city = item.city;
-
-      let template = ` <tr>
-          <td>${this.name}</td>
-          <td>${this.age}</td>
-          <td>${this.salary}</td>
-          <td>${this.city}</td>
+      let template = `
+       <tr>
+          <td>${item.name}</td>
+          <td>${item.age}</td>
+          <td>${item.salary}</td>
+          <td>${item.city}</td>
           <td><button>X</button></td>
       </tr>
       `;
@@ -57,7 +53,7 @@ export default class UserTable {
   onClick(event) {
     let trDel = event.target.closest("tr");
     if (event.target.closest("button")) {
-      trDel.style.display = "none";
+      trDel.remove();
     }
   }
 }
